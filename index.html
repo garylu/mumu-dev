@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>木木</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/themes/webapp.min.css">
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css">
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/index.js"></script>
+	<script>
+		$( document ).on( "pagecreate", function() {
+			$( "body > [data-role='panel']" ).panel();
+			$( "body > [data-role='panel'] [data-role='listview']" ).listview();
+		});
+		$( document ).one( "pageshow", function() {
+			$( "body > [data-role='header']" ).toolbar();
+			$( "body > [data-role='header'] [data-role='navbar']" ).navbar();
+		});
+	</script>
+
+</head>
+<body onload="window_onload()">
+
+	<div data-role="panel" id="left-menu" data-display="overlay" data-theme="b">
+		<div data-theme="a" class="panel-header">
+			<div class="search-n-loc">
+				<input type="search">
+				<a href="" class="location">定位</a>
+			</div>
+			<div class="create-room">+ 创建房间</div>
+
+		</div>
+
+		<div class="panel-content">
+			<ul data-role="listview" data-icon="false" id="room-list">
+				<li>
+					<div>
+						<h1 class="room-name">动院咖啡厅</h1>
+						<span class="room-loc">>10m</span>
+					</div>
+					<div>
+						<span class="room-type">类型</span>
+						<span class="room-num">30人</span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h1 class="room-name">动院206</h1>
+						<span class="room-loc">>10m</span>
+					</div>
+					<div>
+						<span class="room-type">类型</span>
+						<span class="room-num">30人</span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h1 class="room-name">动院111</h1>
+						<span class="room-loc">>20m</span>
+					</div>
+					<div>
+						<span class="room-type">类型</span>
+						<span class="room-num">30人</span>
+					</div>
+				</li>
+
+				<li>
+					<div>
+						<h1 class="room-name">动院111</h1>
+						<span class="room-loc">>20m</span>
+					</div>
+					<div>
+						<span class="room-type">类型</span>
+						<span class="room-num">30人</span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h1 class="room-name">动院咖啡厅</h1>
+						<span class="room-loc">>200m</span>
+					</div>
+					<div>
+						<span class="room-type">类型</span>
+						<span class="room-num">30人</span>
+					</div>
+				</li>
+
+				<li>
+					<div>
+						<h1 class="room-name">动院206</h1>
+						<span class="room-loc">>10m</span>
+					</div>
+					<div>
+						<span class="room-type">类型</span>
+						<span class="room-num">30人</span>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="panel-footer">
+			<a href="#setting-page"  data-transition="pop"  id="setting">设置</a>
+			<span id="app-version">木木 v1.0</span>
+
+		</div>
+	</div>
+
+	<div id="main-page" data-role="page">
+
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>动院咖啡厅</h1>
+			<a href="#left-menu" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left" style="border:none;">Menu</a>
+
+		</div>
+		<!-- /header -->
+
+		<div data-role="content" id="dialog-list">
+
+		</div>
+		<!-- /content -->
+
+		<div data-role="footer"  data-position="fixed">
+			<div  id="chat-box">
+				<div id="color-btn" class="color6">a</div>
+				<input type="text" id="chat-box-input" class="color6">
+				<div id="face-btn"  class="color6">:-)</div>
+				<div id="send-btn"  class="color6">发送</div>
+			</div>
+
+			<div id="keyboard-face">
+				<span>( ´･･)ﾉ(._.`)</span>
+				<span>(｡・ω・｡)</span>
+				<span>(＠_＠;)</span>
+				<span>o(一︿一+)o</span>
+				<span>(#`O′)</span>
+				<span>(°ー°〃)</span>
+				<span>（＝。＝）</span>
+				<span>(ーー゛)</span>
+				<span>(ー`´ー)</span>
+				<span>♪(^∇^*)</span>
+				<span>╰(*°▽°*)╯</span>
+				<span>ヽ(✿ﾟ▽ﾟ)ノ</span>
+				<span>(ノへ￣、)</span>
+				<span>(๑•̀ㅂ•́)و✧</span>
+				<span>（。＾▽＾）</span>
+				<span>(ง •_•)ง</span>
+				<span>(＞﹏＜)</span>
+				<span>(o≖◡≖)</span>
+				<span>(。﹏。*)</span>
+				<span>┗( T﹏T )┛</span>
+			</div>
+
+			<div id="keyboard-color">
+				<span class="color1">綠青</span>
+				<span class="color2">刈安</span>
+				<span class="color3">水淺蔥</span>
+				<span class="color4">紅緋</span>
+				<span class="color5">江戶茶</span>
+				<span class="color6">熨斗目花</span>
+				<span class="color7">蘇芳</span>
+				<span class="color8">萱草</span>
+				<span class="color9">黃唐茶</span>
+				<span class="color10">白茶</span>
+				<span class="color11">花葉</span>
+				<span class="color12">柳染</span>
+				<span class="color13">青碧</span>
+				<span class="color14">藍墨茶</span>
+				<span class="color15">灑落柿</span>
+				<span class="color16">裏柳</span>
+			</div>
+
+		</div>
+	</div>
+	<!-- /main-page -->
+
+	<div id="add-room-page" data-role="page">
+
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>添加房间</h1>
+			<a href="#main-page"  data-transition="fade" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-left" style="border:none;">Delete</a>
+
+		</div>
+		<!-- /header -->
+
+		<div data-role="content" id="add-room-list">
+			<ul data-role="listview" data-inset="true" data-icon="false">
+
+				<form>
+					<div class="ui-field-contain">
+						<label for="room-name">房间名:</label>
+						<input type="text" name="room-name" id="room-name" value=""></div>
+					<div class="ui-field-contain">
+						<label for="room-add">地址:</label>
+						<input type="text" name="room-add" id="room-add" value=""></div>
+					<div class="ui-field-contain">
+						<label for="room-type" class="select">类型：</label>
+						<select name="room-type" id="room-type" data-native-menu="false">
+							<option value="shop">商店</option>
+							<option value="res">餐馆</option>
+							<option value="lect">讲座</option>
+						</select>
+					</div>
+				</form>
+
+			</ul>
+
+			<a href="#" class="ui-btn" id="add-room-btn">创建</a>
+
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /add-room-page -->
+
+	<div id="setting-page" data-role="page">
+
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>设置</h1>
+			<a href="#main-page"  data-transition="fade" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-left" style="border:none;">Delete</a>
+
+		</div>
+		<!-- /header -->
+
+		<div data-role="content" id="setting-list">
+			<ul data-role="listview" data-inset="true" data-icon="false">
+				<li class="sign-in-up">
+					<a href="#" class="ui-btn">登录 / 注册</a>
+				</li>
+
+				<li>
+					<form>
+						<div class="ui-field-contain">
+							<label for="noti-switch">消息提醒</label>
+							<select name="noti-switch" id="noti-switch" data-role="slider">
+								<option value="off">Off</option>
+								<option value="on">On</option>
+							</select>
+						</div>
+						<div class="ui-field-contain">
+							<label for="vib-switch">震动</label>
+							<select name="vib-switch" id="vib-switch" data-role="slider">
+								<option value="off">Off</option>
+								<option value="on">On</option>
+							</select>
+						</div>
+						<div class="ui-field-contain">
+							<label for="sound-switch">声音</label>
+							<select name="sound-switch" id="sound-switch" data-role="slider">
+								<option value="off">Off</option>
+								<option value="on">On</option>
+							</select>
+						</div>
+						<div class="ui-field-contain">
+							<label for="room-switch">推送附近房间</label>
+							<select name="room-switch" id="room-switch" data-role="slider">
+								<option value="off">Off</option>
+								<option value="on">On</option>
+							</select>
+						</div>
+
+					</form>
+				</li>
+
+				<li class="official-setting">
+					<a href="#" class="ui-btn">清除缓存</a>
+					<a href="#" class="ui-btn">意见反馈</a>
+					<a href="#" class="ui-btn">关于</a>
+				</li>
+
+			</ul>
+
+		</div>
+		<!-- /content -->
+
+	</div>
+	<!-- /setting-page -->
+
+</body>
+
+	<!-- 引入插件，兼容低 IE8+ 等低版本浏览器 -->
+	<!--[if lt IE 10]>
+	<script type="text/javascript" src="../../plugin/web-socket-js/swfobject.js"></script>
+	<script type="text/javascript" src="../../plugin/web-socket-js/web_socket.js"></script>
+	<script type="text/javascript">
+    		// 设置变量，配置插件中 WebSocketMain.swf 的引用路径
+    		WEB_SOCKET_SWF_LOCATION = "../../plugin/web-socket-js/WebSocketMain.swf";
+    	</script>
+	<![endif]-->
+	<!-- 引入插件部分结束 -->
+	<!-- sdk -->
+	<script type="text/javascript">
+     	var realtime = require('leancloud-realtime');
+   	 		realtime.config({
+       		WebSocket: require('ws')
+     	});
+   	</script>
+	<script src="js/AV.realtime.min.js"></script>
+	<!-- 逻辑文件 -->
+	<script src="js/socket.js"></script>
+
+</html>

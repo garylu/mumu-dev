@@ -1,0 +1,515 @@
+/***********  reset  ***************/
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div,
+dl,
+dt,
+dd,
+input,
+header,
+section,
+footer {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	-webkit-box-sizing: border-box; /* Safari */
+	font-size: 16px;
+}
+
+img {
+	border: none;
+}
+
+li {
+	list-style: none;
+}
+
+input,
+select,
+textarea {
+	outline: none;
+	border: none;
+	background: none;
+}
+
+textarea {
+	resize: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000 !important;
+}
+
+.ui-panel {
+
+	/*width: 12em;*/
+}
+
+.ui-panel-inner {
+	padding: 0;
+}
+
+.ui-panel-inner>.ui-listview {
+	margin: 0;
+}
+
+ul[data-role="listview"] li a {
+	background: inherit !important;
+	color: inherit !important;
+	border: none !important;
+}
+
+h6 {
+	font-size: 1em !important;
+}
+
+p {
+	font-size: .9em !important;
+}
+
+/*************   left-menu panel   **************/
+div[data-role="panel"] {
+	background-color: #303938;
+	color: #fff;
+	height: 100%;
+	position: fixed;
+}
+
+#left-menu .panel-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 84px;
+	z-index: 1000;
+}
+
+.panel-header .search-n-loc {
+	height: 44px;
+	background: #2b926f;
+	padding: 8px 16px;
+}
+
+.panel-header input {
+	outline: none;
+	border: none;
+	background: #fff;
+	border-radius: 4px;
+	height: 28px;
+	width: 80%;
+	float: left;
+}
+
+.panel-header a.location {
+	color: #fff !important;
+	line-height: 28px;
+	margin-left: 5%;
+	float: right;
+}
+
+.panel-header .create-room {
+	clear: both;
+	height: 40px !important;
+	line-height: 40px;
+	text-align: center;
+	background: #383938;
+	color: #2b926f !important;
+}
+
+.panel-footer {
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	background-color: #2d2e30;
+	border-top: 1px solid #252525;
+}
+
+.panel-footer a#setting {
+	margin-left: 16px;
+	color: #ddd !important;
+	font-size: .9em;
+}
+
+.panel-footer #app-version {
+	float: right;
+	margin-right: 16px;
+	color: #666;
+	font-size: .8em;
+}
+
+.panel-content {
+	margin-top: 84px;
+	margin-bottom: 44px;
+}
+
+#room-list {
+	background: #2d2e30 !important;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+#room-list li {
+	background: inherit !important;
+	color: #fff;
+	border-width: 0px;
+	border-bottom: 1px solid #252525;
+	clear: both;
+	padding: 12px 16px;
+}
+
+#room-list li div {
+	display: block;
+	clear: both;
+}
+
+#room-list li .room-name,
+#room-list li .room-type {
+	float: left;
+}
+
+#room-list li .room-loc,
+#room-list li .room-num {
+	float: right;
+}
+
+#room-list li .room-loc {
+	font-size: .8em;
+	color: #2b926f;
+}
+
+#room-list li .room-type,
+#room-list li .room-num {
+	font-size: .8em;
+	color: #aaa;
+}
+
+/**************   main-page *****************/
+#main-page div[data-role="header"] {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	background-image: url(../image/bg-header.min.svg), none;
+	background-color: #fff;
+	background-repeat: repeat-x;
+	background-position-y: 102%;
+	border-bottom-width: 0;
+}
+
+#main-page div[data-role="footer"] {
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+}
+
+#dialog-list {
+	margin: 0;
+	padding: 16px;
+	background-color: #f7f8fc;
+	background-image: url(../image/bg-pattern.min.svg), none;
+}
+
+#dialog-list p {
+	display: inline-block;
+	padding: 5px 12px;
+	max-width: 90%;
+	overflow: visible !important;
+	border-radius: 4px;
+	margin-top: 10px;
+	clear: both;
+}
+
+#dialog-list li p {
+	white-space: normal;
+}
+
+#dialog-list p.others-reply {
+	float: left;
+}
+
+#dialog-list p.mine-reply {
+	float: right;
+}
+
+/* -------- footer chat box --------*/
+div[data-role="footer"] {
+	padding: 0 !important;
+	border-width: 0;
+}
+
+#chat-box {
+	height: 48px;/*	line-height: 44px;*/
+	border-width: 0;
+	border-bottom: 1px solid #eaeaea;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	padding-left: 58px !important;
+	padding-right: 116px !important;
+	background-image: url(../image/bg-header.min.svg), none;
+	background-color: #fff;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+}
+
+#chat-box div:not(.ui-input-text) {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	border-radius: 4px;
+	line-height: 36px;
+	text-align: center;
+	outline: none !important;
+	cursor: pointer;
+}
+
+#chat-box div#color-btn {
+	float: left;
+	margin-left: -42px;
+}
+
+#chat-box div#face-btn {
+	float: right;
+	margin-right: -44px !important;
+}
+
+#chat-box div#send-btn {
+	float: right;
+	width: 48px;
+	margin-right: -98px !important;
+}
+
+#chat-box-input {
+	float: left;
+	width: 100%;
+	height: 36px;
+	line-height: 24px;
+	border-radius: 4px;
+	padding: 4px 6px;
+}
+
+#chat-box .ui-input-text {
+	margin: 0 !important;
+	border-width: 0 !important;
+	border: 0 !important;
+}
+
+#keyboard-face,
+#keyboard-color {
+	background: #fafafa;
+	height: 180px;
+	padding: 10px 4%;
+	overflow: hidden;
+	display: none;
+}
+
+#keyboard-face span {
+	font-size: .8em;
+	font-weight: normal;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	width: 24%;
+	float: left;
+	cursor: pointer;
+}
+
+#keyboard-color span {
+	font-size: .8em;
+	font-weight: normal;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	width: 21%;
+	margin-right: 5%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float: left;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#keyboard-color span:nth-child(4n) {
+	margin-right: 0;
+}
+
+/* ---------- dialog box styles --------*/
+.color1 {
+	color: #fff !important;
+	background-color: #24936e !important;
+}
+
+.color2 {
+	color: #fff !important;
+	background-color: #e9cd4c !important;
+}
+
+.color3 {
+	color: #fff !important;
+	background-color: #66bab7 !important;
+}
+
+.color4 {
+	color: #fff !important;
+	background-color: #f75c2f !important;
+}
+
+.color5 {
+	color: #fff !important;
+	background-color: #af5f3c !important;
+}
+
+.color6 {
+	color: #fff !important;
+	background-color: #316175 !important;
+}
+
+.color7 {
+	color: #fff !important;
+	background-color: #8e354a !important;
+}
+
+.color8 {
+	color: #fff !important;
+	background-color: #fa9f55 !important;
+}
+
+.color9 {
+	color: #fff !important;
+	background-color: #c18a26 !important;
+}
+
+.color10 {
+	color: #fff !important;
+	background-color: #bda17a !important;
+}
+
+.color11 {
+	color: #fff !important;
+	background-color: #f7c242 !important;
+}
+
+.color12 {
+	color: #fff !important;
+	background-color: #91ad70 !important;
+}
+
+.color13 {
+	color: #fff !important;
+	background-color: #2b8784 !important;
+}
+
+.color14 {
+	color: #fff !important;
+	background-color: #373c38 !important;
+}
+
+.color15 {
+	color: #fff !important;
+	background-color: #feba88 !important;
+}
+
+.color16 {
+	color: #fff !important;
+	background-color: #b5caa0 !important;
+}
+
+/* -------- add new room page --------*/
+#add-room-list {
+	padding: 0;
+}
+
+#add-room-list ul {
+	padding: .5em 1em;
+	background-color: #fff;
+}
+
+#add-room-list .ui-field-contain {
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+#add-room-list .ui-field-contain:last-child {
+	border-bottom: none;
+}
+
+#add-room-list .ui-field-contain label {
+	width: 25%;
+	line-height: 2.4em;
+	float: left;
+	color: #888;
+}
+
+#add-room-list .ui-field-contain div {
+	width: 75%;
+	margin-left: 25%;
+	line-height: 2.6em;
+	border-width: 0;
+}
+
+#add-room-btn {
+	background-color: #2fa5be;
+	color: #fff !important;
+}
+
+/* -------- setting page --------*/
+#setting-list {
+	padding: 0;
+}
+
+#setting-list ul li {
+	margin-bottom: 1em;
+	padding: .5em 1em;
+	background-color: #fff;
+}
+
+#setting-list .ui-field-contain {
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+	padding: .5em 0;
+}
+
+#setting-list .ui-field-contain:last-child {
+	border-bottom: none;
+}
+
+#setting-list .ui-field-contain label {
+	font-weight: bold;
+	width: 25%;
+	margin-right: 40%;
+	line-height: 2em;
+	float: left;
+}
+
+#setting-list .ui-field-contain .ui-slider-label-a {
+	color: #2fa5be;
+}
+
+#setting-list .sign-in-up a {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#setting-list .official-setting a {
+	border-bottom: 1px solid rgba(0, 0, 0, .05) !important;
+	padding: 1em 0;
+}
+
+#setting-list .official-setting a:last-child {
+	border-bottom: none !important;
+}
