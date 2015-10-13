@@ -27,6 +27,20 @@ $(function(){
 		var chatInput = $("#chat-box-input").val();
 		console.log(chatInput);
 		$("#chat-box-input").val(chatInput+text);
+		$('#keyboard-face').hide();
+	});
+	
+//	styleBtn.onclick = function(){
+//	  changeStyle('color1');
+//	  setCookie('userStyle','color1',365);
+//	};
+	
+	$("#keyboard-color span").click(function(){
+		colorStyle = $(this).attr("class");
+		console.log(colorStyle);
+		changeStyle(colorStyle);
+		setCookie('userStyle', colorStyle, 365);
+		$('#keyboard-color').hide();
 	});
 
 	$("#send-btn").click(function(){

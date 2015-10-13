@@ -19,6 +19,9 @@ var firstFlag = true;
 // 用来标记历史消息获取状态
 var logFlag = false;
 
+//样式
+var colorStyle;
+
 var printWall = document.getElementById('dialog-list');
 
 var styleBtn = document.getElementById('color-btn');
@@ -50,10 +53,10 @@ function window_onload(){
 //   }
 // });
 
-styleBtn.onclick = function(){
-  changeStyle('color1');
-  setCookie('userStyle','color1',365);
-};
+//styleBtn.onclick = function(){
+//  changeStyle('color1');
+//  setCookie('userStyle','color1',365);
+//};
 
 function main() {
   // showLog('正在链接服务器，请等待。。。');
@@ -283,7 +286,6 @@ function getLog(callback) {
 // demo 中输出代码
 function showLog(msg, data, isBefore) {
   var datas= new Array();
-  var colorStyle;
   var posStyle = "mine-reply";
   if (data) {
     // console.log(data);
@@ -380,14 +382,14 @@ function removeClass(obj, cls) {
 }
 function changeStyle(cls){
   var before = inputSend.className;
-  removeClass(styleBtn, before);
-  addClass(styleBtn, cls);
+//  removeClass(styleBtn, before);
+//  addClass(styleBtn, cls);
   removeClass(inputSend, before);
   addClass(inputSend, cls); 
-  removeClass(emojiBtn, before);
-  addClass(emojiBtn, cls); 
-  removeClass(sendBtn, before);
-  addClass(sendBtn, cls);
+//  removeClass(emojiBtn, before);
+//  addClass(emojiBtn, cls); 
+//  removeClass(sendBtn, before);
+//  addClass(sendBtn, cls);
 }
 
 // 获取高度
